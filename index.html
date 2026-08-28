@@ -26,12 +26,19 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     
-    <h1>歡迎來到我的 GA4 / GTM 測試網頁！</h1>
-    <p>點擊下面的按鈕來測試事件觸發：</p>
+    <h1>歡迎來到我的 GA4 / GTM 測試網頁！</h1>  
     
-    <!-- 我們準備用來測試點擊追蹤的按鈕 -->
-    <button id="btn-buy" style="padding:10px 20px; font-size:16px; background:lightblue;">
-        購買商品 (測試按鈕)
-    </button>
+    <!-- 測試1 DOM 點擊 (Click ID) -->
+    <div class="card">
+        <button id="btn-buy" class="btn-buy">購買商品 (測試按鈕)</button>
+    </div>
+
+    <!-- 測試2 DataLayer 資料層推送 -->
+    <div class="card">
+        <p>點擊將商品名稱與金額推送到 dataLayer，讓 GTM 接手讀取變數。</p>
+        <button class="btn-cart" onclick="pushAddToCart()">加入購物車 ($2,990)</button>
+    </div>
+
+    
 </body>
 </html>
