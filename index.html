@@ -44,6 +44,24 @@
         <h3>實驗 3：表單點擊 (Click ID)</h3>
         <button id="btn-submit-form" class="btn-submit">送出諮詢表單</button>
     </div>
+
+    <!-- 測試4 捲動監聽測試區域 -->
+    <div style="height: 1000px; background: #f0f0f0; padding: 15px; margin-top: 20px;">
+        <p>↓ 往下滑動網頁以測試 GTM 捲動深度 (Scroll Depth) ↓</p>
+    </div>
+
+    <script>
+    // 實驗 2 的事件寫法：將資料推送到 window.dataLayer
+    function pushAddToCart() {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'custom_add_to_cart',
+        'product_name': '無線藍牙耳機',
+        'product_price': 2990
+      });
+      alert('已將商品資料推送到 dataLayer！');
+    }
+  </script>
     
 </body>
 </html>
